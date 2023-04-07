@@ -1,0 +1,36 @@
+{% extends "admin/base.html"  %} {% block content %}
+<div class="form-item">
+    <div class="container my-5">
+        <div class="row">
+            <!-- column -->
+            <div class="col-12">
+                <h2 class="text-dark">Home Contact </h2>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in message %}
+                            <tr>
+                                <td>{{ x.id }}</td>
+                                <td>{{ x.first_name }}</td>
+                                <td>{{ x.lastname }}</td>
+                                <td>{{ x.email }}</td>
+                                <td><a href="/admin/home_contact/delete/{{x.id}}"><i class="far fa-trash-alt" style="color: #1d87eb;"></i></a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

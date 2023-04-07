@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO_ECO_Consulting</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='home-css/home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="{{ url_for('static',filename='js/home_slider_gallery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/open_menu.js') }}"></script>
+</head>
+<body>
+    <!-- Main section start -->
+   <section id="main">
+
+             <div class="container">
+                        <div class="content">
+                            <div class="logo">
+                                <div class="logo-img">
+                                    <img src="{{ url_for('static',filename='image/logo.png') }}">
+                                    <h2 class="geo-logo"> Geo-Eco
+                                    </h2>
+                                </div>
+                               
+                                <nav  onclick="open_menu()">
+                                    <span>Menu</span>
+                                    <i class="fas fa-align-right"></i>
+                                </nav>
+                            </div>
+                          <div class="main-text">
+                            <h1>WELCOME TO GEO ECO CONSULTING </h1>
+                            <p>Our competitive advantage lies in the range of services we provide and customer satisfaction.</p>
+                               <div class="main-btn">READ MORE
+                                <a href="{{ url_for('about') }}"> </a>
+                             </div>
+                                <div class="social-media">
+                                    <span>Social Media</span>
+                                        <div class="social-item">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-google-plus-square"></i>
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-instagram-square"></i>
+                                        </div>
+                                </div>
+                          </div>  
+                    </div>
+            </div>
+                    <div class="main-img">
+                        
+                        <div class="icons">
+                            <i class="fas fa-chevron-left" onclick="next()"></i>
+                            <i class="fas fa-chevron-right" onclick="next()"></i>  
+                      </div>
+                      
+                  </div>
+
+   </section> 
+   <!-- Main section end -->
+      <!-- menu section start -->
+      <div class="menus" id="openmenu" >
+        <div class="menu-grid">
+            <div class="navlink">
+                <div class="close-icon">
+                    <a href="#" class="close"  onclick="close_menu()">
+                        <div class="close-txt">Close</div>
+                        <img src="{{ url_for('static',filename='image/close.png') }}">
+                    </a>
+                </div>
+                <div class="navbar" >
+                    <a href="{{ url_for('index') }}" id="linktxt" >
+                        <div class="linktxt" >Home</div>
+                        
+                    </a>
+                    <a href="{{ url_for('about') }}" id="linktxt" >
+                        <div class="linktxt">About Us</div>
+                       
+                    </a>
+                    <a href="{{ url_for('service') }}" id="linktxt" >
+                        <div class="linktxt">Services</div>
+     
+                    </a>
+                    <a href="{{ url_for('project') }}" id="linktxt" >
+                        <div class="linktxt">Projects</div>
+ 
+                    </a>
+                    <a href="{{ url_for('contact') }}" id="linktxt" >
+                        <div class="linktxt">Contact us</div>
+     
+                    </a>
+                </div>
+            </div>
+                 <div class="navimg">
+                     <div class="heading-menu">
+                         <h1 class="closemenu-head">Get in touch</h1>
+                         <div class="white-line"></div>
+                     </div>
+                     <div class="menu-content">
+                         <div class="location">
+                             <div class="loc_menu">
+                                     <span>E:</span>
+                                     &nbsp;
+                                     <a href="mailto:office@geoeco.az"
+                                         class="textlink-navmenu">office@geoeco.az</a>
+                             </div>
+                         </div>
+                         <div class="location">
+                                 <div class="loc_menu">
+                                     <span>T:</span>
+                                     <a href="tel:(+994 12) 430 01 31" class="textlink-navmenu">(+994 12) 430 01 31 </a>
+                                 </div>
+                         </div>
+                         <div class="location">
+                             <div class="loc_menu">
+                                 <span>L:</span>
+                                 " Az 1012 Bakı şəh, Moskva pr., 67.  "
+                             </div>
+                         </div>
+                     </div>
+                     <div class="social-menu">
+                             <div class="mediatext">Social Media</div>
+                             <div class="media-icons">
+                                 <a href="" class="menu_social_media">
+                                     <img src="{{ url_for('static',filename='image/icon-f.png') }}">
+                                 </a>
+                                 <a href="" class="menu_social_media">
+                                     <img src="{{ url_for('static',filename='image/icon-l.png') }}">
+                                 </a>
+                             </div>
+                     </div>
+                 </div>
+         
+        </div>
+    </div>
+    <!-- menu section start -->
+
+<!-- Recent Project section start -->
+ <section id="projects">
+        <div class="projects-container">
+            <div class="item itemss">
+               <img src="{{ url_for('static',filename='image/slider1.jpg') }}" >
+               <div class="item-text">
+                Karas Regional Council v 
+             </div>
+            </div>
+            <div class="item itemss">
+                <img src="{{ url_for('static',filename='image/img6.jpg') }}" >
+                <div class="item-text">
+                    Buitepost Total
+                 </div>
+
+            </div>
+         <div class="item itemss">
+                  <img src="{{ url_for('static',filename='image/5.jpg') }}" >
+                 <div class="item-text">
+                    House Wimpie
+                 </div>
+
+            </div>
+            <div class="item">
+                <div class="item-last">
+                    <h3 class="heading2">Explore more of our Recent Projects</h3>
+                    <p class="paragraf2">To be the premier engineering consulting company in every market we serve.</p>
+                    <a class="project-btn" href="{{ url_for('project') }}"> <button class="butn">LOAD MORE</button>
+                    </a>
+             </div>
+         </div>
+     </div>
+  
+
+</section> 
+<!-- recent Project section end -->
+
+<!-- Main-about section start -->
+     <section id="main-about"> 
+        <div class="about-container">
+                <h1 class="about-header">At Nice Engineering we operating with integrity & accountability.</h1>
+                <div class="green-line"></div>
+                <p class="about-paragraf">Established in 2012, GeoEco Consulting Company is an innovative Consulting
+                     and Construction company based in Baku, Azerbaijan. GeoEco experienced multi-sphere engineering,
+                      researching and construction staffs, are targeting to provide world-class Engineering and Construction
+                       services in Azerbaijan and the Regional Market.
+                     <br><br>
+                     Our staff are qualified and capable to provide total
+                     project solutions ranging from Conceptual design briefs up to full detailed engineering design, 
+                     project management and construction works.
+                </p>
+ 
+
+          <a class="about-a" href="{{ url_for('about') }}">
+                READ MORE
+            </a>
+        </div>
+    <div class="main-about-img">
+            <div class="first-img"> 
+               
+            </div>
+            <div class="center-img"> 
+               
+            </div>
+            <div class="last-img">
+              
+            </div>
+    </div>
+
+    </section>
+<!-- Main-about section end -->
+
+<!-- Main-sevices section start -->
+ <section id="main-services">
+     <div class="main-services-header">
+         <h1 class="services-head">Our optimized, innovative, high quality solutions.
+        </h1>
+         <div class="blue-line"></div>
+     </div>
+    <div class="services-container">
+            <div class="items">
+                        
+                    <div class="service-box">
+                            <h1 class="service">
+                                Hydrogeological Engineering
+                            </h1>
+                            <div class="green-line"></div>
+                            <div class="service-item">
+                                <img src="{{ url_for('static',filename='image/dot.jpg') }}"> 
+                                <span>Prediction of the Ground Water dynamics</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                <span>Groundwater Monitoring, Predictive Reporting </span> 
+                            </div>
+                            <div class="service-item">
+                                <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                <span>Dam Seepage Assessment</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="{{ url_for('static',filename='image/dot.jpg') }}" >
+                                <span>Flooding and Droughts Prediction</span>
+                            </div>
+                    </div>    
+             </div>
+            <div class="items first"> 
+                           
+                        <div class="service-box"> 
+                                <h1 class="service">
+                                    Geotechnical Engineering
+                                </h1> 
+                                <div class="green-line"></div>
+                                <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Interpretation of Geotechnical Row Data</span>
+                                </div>
+                                <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Determination of Soil Characteristics in Fields</span>
+                                </div>
+                                <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Soil Laboratory Testin</span>
+                                </div>
+                                <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Preparation of Geotechnical Investigation Reports </span> 
+                                </div>
+                        </div>     
+            </div>
+                    <div class="items center">
+                               
+                            <div class="service-box">
+                                    <h1 class="service">
+                                        Engineering Geophysics
+                                    </h1> 
+                                    <div class="green-line"></div>
+                                 <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Geophysical Investigations</span>    
+                                 </div>
+                                 <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Magnetometry Exploration</span>   
+                                 </div>
+                                 <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Gravimetric Exploration</span> 
+                                 </div>
+                                    
+                                 <div class="service-item">
+                                    <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                                    <span>Magneto-telluric Exploration</span> 
+                                 </div>
+                            </div>
+                  </div>
+
+             <div class="items end">
+                           
+                    <div class="service-box">
+                            <h1 class="service">
+                                Environmental Engineering
+                            </h1> 
+                            <div class="green-line"></div>
+                        <div class="service-item">
+                            <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                            <span>Wastewater management</span>
+                        </div>
+                        <div class="service-item">
+                            <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                            <span>Solid waste management 
+                                </span>
+                        </div>
+                        <div class="service-item">
+                            <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                            <span>Hazardous waste management</span>
+                        </div>
+                        <div class="service-item">
+                            <img src="{{ url_for('static',filename='image/dot.jpg') }}">
+                            <span>Cleanup of hazardous-waste sites</span>
+                        </div>
+                 </div>
+            </div> 
+ </div>
+          <div class="services-button">
+            <div class="btn">
+                <a href="{{ url_for('service') }}">lOAD MORE</a>
+            </div>
+        </div>
+  
+
+</section> 
+<!-- Main-services section end -->
+
+<!-- Main-contact section start -->
+<section id="main-contact">
+<div class="contact-container">
+    <div class="container-call">  
+        <div class="call_head">
+            <i class="fas fa-phone-alt"></i>
+         <h1 class="contact-h1">Get a Call Back</h1>
+        </div>
+        <div class="call_text">
+            <h3>Need to schedule a consultation?</h3>
+            <p>Please fill out the form and press the submit button. We will get back to you with 1 to 2 business days.</p>
+            <br><br>
+            <p>We will only use your personal information to handle your enquiry.</p>
+        </div>
+     </div>
+
+    <div class="container-mail">
+          <div class="form">
+        <form action="/admin/home_contact" method="POST">
+           <label for="fname">First Name</label>
+            <input type="text" class="text-field" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="email">Email Address</label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button">
+        
+          </form>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- Main-contact section end -->
+
+<!-- Main-companions section start -->
+<section id="companions">
+<div class="teams">
+       <h1 class="teamhead">Our team and associates are registered members with.</h1>
+          <div class="blue-line"></div>
+            <div class="teams-container">
+                <div class="team-grid grid">
+                    <div class="team-item">
+                        <a href="https://pmdprojects.az"> <img src="{{ url_for('static',filename='image/PMD.png') }}"> </a>
+                    </div>
+                    <div class="team-item">
+                        <a href="http://mst.gov.az/"> <img src="{{ url_for('static',filename='image/azmelsutes1.jpg') }}"> </a>
+                    </div>
+                    <div class="team-item">
+                        <a href="https://www.azersu.az/az"> <img src="{{ url_for('static',filename='image/azarsu.png') }}" > </a>
+                    </div>
+                    <div class="team-item">
+                        <a href="https://azergold.az/"> <img src="{{ url_for('static',filename='image/azergold.png') }}"> </a>
+                    </div>
+                    <div class="team-item">
+                        <a href="https://alke.com.tr/alkecons/"> <img src="{{ url_for('static',filename='image/alke.jpg') }}"> </a>
+                    </div>
+                    
+                </div>
+         </div>
+</div>
+
+</section>
+<!-- Main-companions section end -->
+
+<!-- Main-footer section start -->
+<section id="footer">
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-item">
+                <h1 class="footerhead">Get in touch</h1>
+                <div class="blue-line"></div>
+                <p class="footer-p">Our principal focus is Multi-engineering Consulting, 
+                    Hydraulic, Environmental Engineering and Project Management.</p>
+                <div class="sosial-media">
+                    <div class="sosial-text">Social Media</div>
+                    <div class="sosial-icon">
+                        <a href="">
+                            <img src="{{ url_for('static',filename='image/icon-f-dark.png') }}">
+                        </a>
+                        <a href="">
+                            <img src="{{ url_for('static',filename='image/icon-l-dark.png') }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="grid-menu">
+                    <div class="menu">
+                        <a href="{{ url_for('index') }}">HOME</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('about') }}">ABOUT US</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('service') }}">SERVICES</a>
+                    </div>
+                    <div class="menu">
+                        <a href="">CAREER</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('project') }}">PROJECTS</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('contact') }}">CONTACT US</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <div class="mail">
+                        <img src="{{ url_for('static',filename='image/icon-email.png') }}">
+                        <a href="">info@niceengineers.com</a>
+                    </div>
+                    <div class="phone">
+                        <img src="{{ url_for('static',filename='image/icon-phone.png') }}" >
+                        <a href="">+264 61 301 940</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-location">
+                    <div class="location-item">
+                    <img src="{{ url_for('static',filename='image/icon-location.png') }}">
+                    <div class="location-text">
+                        Office Location:
+                        <br>
+                        447 Storch street, Windhoek West, Namibia 
+                    </div>
+                </div>
+                </div>
+                <div class="footer-logo">
+                    <img src="{{ url_for('static',filename='image/logo.png') }}">
+                </div>
+            </div>
+        </div>
+        <div class="footer-flex">
+            <div class="company">
+                © NICE Engineering 2021. All rights reserved</div>
+            <div class="byme">
+                Designed and Developed by
+                <a href="https://github.com/KheyransaPashayeva">X.Pashayeva</a>
+            </div>
+        </div>
+    </footer>
+</section>
+<!-- Main-footer section end -->
+</body>
+</html>

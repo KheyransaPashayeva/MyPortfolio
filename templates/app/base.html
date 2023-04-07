@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO_ECO_Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+<!-- navbar section start -->
+<section id="navbar">
+    <div class="nav-container">
+      <div class="nav">
+          <div class="logo">
+              <a href="{{ url_for('index') }}">
+                  <img src="{{ url_for('static',filename='image/logo.png') }}">
+                  <h2 class="geo-logo"> Geo-Eco
+                </h2>
+              </a>
+          </div>
+          <nav>
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('about') }}">ABOUT US</a>
+            <a href="{{ url_for('service') }}">SERVICES</a>
+            <a href="{{ url_for('project') }}">PROJECTS</a>
+            <a href="{{ url_for('contact') }}">CONTACT US</a>
+          </nav>
+      </div>
+
+  <!-- navbar section end -->
+  {% block content %}
+  {% endblock %}
+        <!-- about-footer section start -->
+<section id="footer">
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-item">
+                <h1 class="footerhead">Get in touch</h1>
+                <div class="blue-line"></div>
+                <p class="footer-p">Our principal focus is Multi-engineering Consulting, 
+                    Hydraulic, Environmental Engineering and Project Management.</p>
+                <div class="sosial-media">
+                    <div class="sosial-text">Social Media</div>
+                    <div class="sosial-icon">
+                        <a href="">
+                            <img src="{{ url_for('static',filename='image/icon-f-dark.png') }}">
+                        </a>
+                        <a href="">
+                            <img src="{{ url_for('static',filename='image/icon-l-dark.png') }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="grid-menu">
+                    <div class="menu">
+                        <a href="{{ url_for('index') }}">HOME</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('about') }}">ABOUT US</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('service') }}">SERVICES</a>
+                    </div>
+                    <div class="menu">
+                        <a href="">CAREER</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('project') }}">PROJECTS</a>
+                    </div>
+                    <div class="menu">
+                        <a href="{{ url_for('contact') }}">CONTACT US</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <div class="mail">
+                        <img src="{{ url_for('static',filename='image/icon-email.png') }}">
+                        <a href="">info@niceengineers.com</a>
+                    </div>
+                    <div class="phone">
+                        <img src="{{ url_for('static',filename='image/icon-phone.png') }}" >
+                        <a href="">+264 61 301 940</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-location">
+                    <div class="location-item">
+                    <img src="{{ url_for('static',filename='image/icon-location.png') }}">
+                    <div class="location-text">
+                        Office Location:
+                        <br>
+                        447 Storch street, Windhoek West, Namibia 
+                    </div>
+                </div>
+                </div>
+                <div class="footer-logo">
+                    <img src="{{ url_for('static',filename='image/logo.png') }}">
+                </div>
+            </div>
+        </div>
+        <div class="footer-flex">
+            <div class="company">
+                © NICE Engineering 2021. All rights reserved</div>
+            <div class="byme">
+                Designed and Developed by
+                <a href="https://github.com/KheyransaPashayeva">X.Pashayeva</a>
+            </div>
+        </div>
+    </footer>
+</section>
+<!-- about-footer section end -->
+</body>
+</html>
+

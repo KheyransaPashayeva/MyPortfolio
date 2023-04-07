@@ -1,0 +1,168 @@
+{% extends 'app/base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='about-css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="header">
+    <div class="head-text">
+        
+            <h1>About us</h1>
+            <div class="white-line"></div>
+        
+    </div>
+    <div class="homepage">
+        <div class="hometext">
+            <div class="homelink">
+                <a class ="home" href="{{ url_for('index') }}">HOME</a>
+            </div>
+            <img src="{{ url_for('static',filename='image/crunbs-icon.png') }}">
+            <div class="about-text">ABOUT US</div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+      <!-- about-us section start -->
+      <section id="main-about"> 
+          <div class="about-text">
+              <div class="about-grid">
+                 <div class="about-container">
+                      <h1 class="about-header">We are a Multi-Disciplinary Engineering Consultancy Agency</h1>
+                      <div class="blue-line"></div>
+                      <p class="about-paragraf">Nice Consulting Engineers is a Namibian owned company,
+                        based in Windhoek. Our principal focus is Multi-engineering Consulting, Hydraulic,
+                         Environmental Engineering and Project Management.
+                        <br><br>
+                         Nice Consulting Engineers is 100% owned by previously
+                         disadvantaged professional Namibians, with experts in all engineering disciplines "Civil,
+                         Electrical and Mechanical Engineering". Nice  Consulting Engineers provides customers with optimized quality
+                         and cost effective services, using internationally accepted standards.
+                     </p>
+                 </div>
+                  <div class="main-about-img">
+                      <div class="first-img"> 
+                      </div>
+                      <div class="center-img"> 
+                      </div>
+                      <div class="last-img">
+                      </div>
+                 </div>
+            </div>
+       </div>
+    </section>
+      <!-- about-us section end -->
+
+      <!-- about-features section start -->
+   <section id="features">
+       <div class="feature-container">
+           <div class="feature-grid">
+               <div class="grid-item">
+                   <div class="icon">
+                       <img src="{{ url_for('static',filename='image/icon-about-one.png') }}" alt="">
+                   </div>
+                   <p class="feature-p">Operating with 
+                       Integrity and Accountability.
+                    </p>
+               </div>
+               <div class="grid-item">
+                <div class="icon">
+                    <img src="{{ url_for('static',filename='image/icon-about-two.png') }}" alt="">
+                </div>
+                <p class="feature-p">Promote Ingenuity, Innovation,
+                     Equality, and Leadership.
+                 </p>
+               </div>
+               <div class="grid-item">
+                <div class="icon">
+                    <img src="{{ url_for('static',filename='image/icon-about-three.png') }}" alt="">
+                </div>
+                <p class="feature-p">Encourage Teamwork and Growth.
+                 </p>
+               </div>
+           </div>
+       </div>
+   </section>
+      <!-- about-features section end -->
+
+ <!-- about-services section start -->
+ <section id="about-service">
+    <div class="container-service">
+        <div class="service-grid">
+              <div class="service-item">
+                <div class="img">
+                    <img src="{{ url_for('static',filename='image/i3.jpg') }}">
+                </div>
+                <div class="img-content">
+                    <div class="img-text">
+                        <div>Water Engineering</div>
+                    </div>
+                    <a href="{{ url_for('service') }}">
+                        <img src="{{ url_for('static',filename='image/crunbs-blue-icon.png') }}">
+                    </a>
+                </div>
+              </div>
+              <div class="service-item">
+                 <div class="img">
+                    <img src="{{ url_for('static',filename='image/i5.jpg') }}">
+                </div>
+               <div class="img-content">
+                   <div class="img-text">
+                        <div>Electrical Engineering</div>
+                  </div>
+                   <a href="{{ url_for('service') }}">
+                       <img src="{{ url_for('static',filename='image/crunbs-blue-icon.png') }}">
+                   </a>
+               </div>
+              </div>
+              <div class="service-item">
+                 <div class="img">
+                     <img src="{{ url_for('static',filename='image/i4.jpg') }}">
+                 </div>
+               <div class="img-content">
+                   <div class="img-text">
+                       <div>Mechanical Engineering</div>
+                  </div>
+                   <a href="{{ url_for('service') }}">
+                       <img src="{{ url_for('static',filename='image/crunbs-blue-icon.png') }}">
+                   </a>
+              </div>
+              </div>
+        </div>
+          <div class="btn">
+            <a href="{{ url_for('service') }}">LOAD MORE</a>
+          </div>
+    </div>
+</section>
+<!-- about-services section end -->
+
+
+<!-- about-contact section start -->
+
+<section id="about-contact">
+              
+                       <div class="contact-grid">
+                                <div class="contact-content">
+                                      <div class="contact-text">
+                                           <h1 class="contacthead">Need to schedule a consultation?</h1>
+                                           <p class="contact-p"> We have experience in the fields of Project Management and Engineering: Civil, Mechanical, Structural, Electrical, Road & Transport, 
+                                               Hydraulic or Water and Environmental engineering.
+                                            </p>
+                                            <a class="contact-btn" href="{{ url_for('contact') }}">SCHEDULE NOW</a>
+                                      </div>
+                                </div>
+                                <div class="contact-img">
+                                   <img src="{{ url_for('static',filename='image/call-back.jpg') }}" >
+                                 </div>
+                       </div> 
+
+
+        
+
+</section>
+
+<!-- about-contact section end -->
+
+{% endblock %}

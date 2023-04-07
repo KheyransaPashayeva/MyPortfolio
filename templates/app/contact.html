@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO_ECO_Consulting</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='contact-css/contact.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+         <!-- navbar section start -->
+         <section id="navbar">
+            <div class="nav-container">
+              <div class="nav">
+                  <div class="logo">
+                      <a href="{{ url_for('index') }}">
+                          <img src="{{ url_for('static',filename='image/logo.png') }}">
+                          <h2 class="geo-logo"> Geo-Eco
+                          </h2>
+                      </a>
+                  </div>
+                  <nav>
+                    <a href="{{ url_for('index') }}">HOME</a>
+                    <a href="{{ url_for('about') }}">ABOUT US</a>
+                    <a href="{{ url_for('service') }}">SERVICES</a>
+                    <a href="{{ url_for('project') }}">PROJECTS</a>
+                    <a href="{{ url_for('contact') }}">CONTACT US</a>
+                  </nav>
+              </div>
+              <div class="header">
+                  <div class="head-text">
+                      
+                          <h1>Contact us</h1>
+                          <div class="white-line"></div>
+                      
+                  </div>
+                  <div class="homepage">
+                      <div class="hometext">
+                          <div class="homelink">
+                              <a class ="home" href="{{ url_for('index') }}">HOME</a>
+                          </div>
+                          <img src="{{ url_for('static', filename='image/crunbs-icon.png') }}">
+                          <div class="about-text">CONTACT US</div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </section>
+          <!-- navbar section end -->
+
+    <!-- Main-contact section start -->
+    <section id="main-contact">
+        <div class="contact">
+                <div class="contact-container">
+                    <div class="container-call">  
+                        <div class="call_head">
+                            <i class="fas fa-phone-alt"></i>
+                            <h1 class="contact-h1">Get a Call Back</h1>
+                        </div>
+                        
+                            <h3>Thank you for your interest in Nice Consulting Engineers, We’d love to hear from you.</h3>
+                            <p>If you’d like to find out about our services, 
+                                please fill in the enquiry form and our associate will be in contact with you
+                            </p>
+                         <div class="link">
+                             <div class="mail">
+                                 <img src="{{ url_for('static', filename ='image/icon-email-gree.png') }}" >
+                                 <a href="mailto:office@geoeco.az">office@geoeco.az </a>
+                             </div>
+                             <div class="phone">
+                                 <img src="{{ url_for('static', filename ='image/icon-phone-green.png') }}" >
+                                 <a href="tel:(+994 12) 430 01 31">(+994 12) 430 01 31</a>
+                             </div>
+                         </div>
+                         <div class="location">
+                             <img src="{{ url_for('static', filename ='image/icon-location-green.png') }}">
+                             <div class="location-text">
+                                Office Location:
+                                <br>
+                                Az 1012 Bakı şəh, Moskva pr., 67. 
+                             </div>
+                         </div>
+                        
+                    </div>
+                
+                    <div class="container-mail">
+                        <div class="form">
+                            <form action="/admin/contact" class="bg-light p-5 contact-form" method="POST">
+                                <label for="fname">Name &amp;&nbsp;Surname</label>
+                                    <input type="text" class="text-field" id="fname" name="firstname" placeholder="Your name and surname">
+                                
+                                    <label for="phonenum">Phone number</label>
+                                    <input type="tel" id="lnumber" name="phone" placeholder="+994...">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" placeholder="Enter Email" name="email" required="">
+                                    <label for="email-2">Massege</label>
+                                    <textarea name="message" maxlength="500" id="massege" placeholder="How can we help? " class="text-area"></textarea>
+                                    <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button">
+                                
+                                </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </section>
+        
+    <!-- Main-contact section end -->
+
+<!-- Recent Project section start -->
+    <section id="projects">
+        <div class="projects-container">
+            <div class="item itemss">
+            <img src="{{ url_for('static',filename='image/slider1.jpg') }}" >
+            <div class="item-text">
+                Karas Regional Council v 
+            </div>
+            </div>
+        
+            <div class="item itemss">
+                <img src="{{ url_for('static',filename='image/img6.jpg') }}" >
+                <div class="item-text">
+                    Buitepost Total
+                </div>
+
+            </div>
+            <div class="item itemss">
+                <img src="{{ url_for('static',filename='image/5.jpg') }}" >
+                <div class="item-text">
+                    House Wimpie
+                </div>
+
+            </div>
+            <div class="item">
+                <div class="item-last">
+                    <h3 class="heading2">Explore more of our Recent Projects</h3>
+                    <p class="paragraf2">To be the premier engineering consulting company in every market we serve.</p>
+                    <a class="project-btn" href="{{ url_for('project') }}">LOAD MORE
+                    </a>
+            </div>
+        </div>
+    </div>
+
+
+    </section> 
+<!-- recent Project section end -->
+<section id="footer">
+    <footer>
+        <div class="social">
+            <div class="social-text">Social Media</div>
+            <div class="icons">
+                <div class="icon">
+                    <a href="">
+                        <img src="{{ url_for('static',filename='image/icon-f-dark.png') }}">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="">
+                        <img src="{{ url_for('static',filename='image/icon-i-dark.png') }}">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="">
+                        <img src="{{ url_for('static',filename='image/icon-t--dark.png') }}">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="">
+                        <img src="{{ url_for('static',filename='image/icon-l-dark.png') }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="company">
+            © NICE Engineering 2021. All rights reserved</div>
+        <div class="byme">
+            Designed and Developed by
+            <a href="https://github.com/KheyransaPashayeva">X.Pashayeva</a>
+        </div>
+    </footer>
+
+</section>
+        
+</body>
+</html>
