@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="jumbotron text-center bg-white">
+        {% if error %}
+            <br/>
+            {{ error }}
+            <br/>
+            <br/>
+        {% endif %}
+        <h1>{{ name }} Profile</h1>
+        <html>
+        <head>
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+            </style>
+        </head>
+        <body>
+        <table style="width:100%">
+            <tr>
+                <th>Page Username</th>
+                <th>Page Password</th>
+                <th>Follower</th>
+            </tr>
+            <tr>
+                {% for page in pagedetail %}
+                    {% for pag in page %}
+                        <td>{{ pag }}</td>
+                    {% endfor %}
+                    <br/>
+                {% endfor %}
+        </table>
+        {{ date }}
+        </body>
+        </html>
+        <br/>
+        <form method="post" action="{% url 'startbot' %}">
+            {% csrf_token %}
+            <br/>
+            <input type="text" name="tag" placeholder="Tag" required/>
+            <br/>
+            <br/>
+            <input type="text" name="comment" placeholder="Comment" required/>
+            <br/>
+            <br/>
+            <input type="text" name="count" placeholder="Amount of Like" required/>
+            <br/>
+            <br/>
+            <input class="btn btn-primary" type="submit" value="Start Bot"/>
+        </form>
+        <br/>
+        <h5>Don't insert a page? <a class="text" href="{% url 'profile' %}">Insert a page</a></h5>
+    </section>
+    <canvas id="myChart" width="100" height="30"></canvas>
+    <script>
+        labels = []
+        {% for i in date %}
+            labels.push('{{ i }}')
+        {% endfor %}
+        data ={{ follower }}
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'My followers',
+                    data: data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'World population per region (in millions)'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+{% endblock %}
